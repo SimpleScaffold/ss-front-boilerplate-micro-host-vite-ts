@@ -36,6 +36,9 @@ const localState = {
 }
 
 const localReducers = {
+    increment: (state: typeof localState) => {
+        state.value += 1
+    },
     decrement: (state: typeof localState) => {
         state.value -= 1
     },
