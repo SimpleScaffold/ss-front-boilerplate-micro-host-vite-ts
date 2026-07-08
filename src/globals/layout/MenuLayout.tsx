@@ -29,6 +29,7 @@ import { useAppSelector } from '../store/redux/reduxHooks'
 import type { FinalMenuTree } from 'src/features/menu/types/finalMenuTypes'
 import { convertToFinalMenu } from 'src/features/menu/utils/converter'
 import { HostThemeSettingsDrawer } from 'src/globals/theme/HostThemeSettingsDrawer.tsx'
+import { ContentConstraintArea } from './ContentConstraintArea'
 import {
     ModalConstraintProvider,
     useModalConstraint,
@@ -337,7 +338,9 @@ const MenuLayout = () => {
                     </>
                 }
             >
-                <Outlet />
+                <ContentConstraintArea>
+                    <Outlet />
+                </ContentConstraintArea>
             </DSsideMenu>
 
             {openModals.map((item) => (
